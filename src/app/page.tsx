@@ -116,6 +116,45 @@ export default function Home() {
             />
           </motion.a>
         </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+          style={{
+            position: 'absolute',
+            bottom: '24px',
+            right: '24px',
+            display: 'flex',
+            gap: '24px',
+            fontSize: '14px',
+            color: '#FFF',
+            zIndex: 3,
+            fontFamily: 'var(--font-khula)',
+            fontWeight: 700,
+          }}
+        >
+          <a
+            href="/privacy"
+            style={{
+              textDecoration: 'none',
+              color: 'inherit',
+              ':hover': { textDecoration: 'underline' }
+            }}
+          >
+            Privacy Policy
+          </a>
+          <span>•</span>
+          <a
+            href="/faq"
+            style={{
+              textDecoration: 'none',
+              color: 'inherit',
+              ':hover': { textDecoration: 'underline' }
+            }}
+          >
+            FAQ
+          </a>
+        </motion.div>
       </div>
     </div>
   );
