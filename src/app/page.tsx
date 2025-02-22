@@ -77,9 +77,45 @@ export default function Home() {
           style={{
             position: 'absolute',
             width: '35vh',
-            zIndex: 2,
+            zIndex: 2
           }}
         />
+        <div style={{
+          position: 'absolute',
+          bottom: '20vh',
+          display: 'flex',
+          gap: '20px',
+          zIndex: 3,
+        }}>
+          <motion.a
+            href="https://apps.apple.com/app/zoe"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            <img
+              src="/badges/app-store-badge.svg"
+              alt="Download on the App Store"
+              style={{ height: '48px', width: 'auto' }}
+            />
+          </motion.a>
+          <motion.a
+            href="https://play.google.com/store/apps/details?id=com.zoe"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+          >
+            <img
+              src="/badges/play-store-badge.svg"
+              alt="Get it on Google Play"
+              style={{ height: '48px', width: 'auto' }}
+            />
+          </motion.a>
+        </div>
       </div>
     </div>
   );
