@@ -8,6 +8,20 @@ export default function PrivacyPolicy() {
         color: '#FFF',
         fontFamily: 'var(--font-khula)',
       }}>
+        <a
+          href="/"
+          onClick={handleBack}
+          style={{
+            display: 'inline-block',
+            marginBottom: '20px',
+            color: '#FFF',
+            textDecoration: 'none',
+            fontFamily: 'var(--font-khula)',
+            fontSize: '16px',
+          }}
+        >
+          ← Back
+        </a>
         <h1 style={{ 
           fontSize: '48px', 
           marginBottom: '40px',

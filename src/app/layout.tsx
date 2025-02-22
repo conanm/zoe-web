@@ -1,5 +1,9 @@
+"use client";
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Khula } from "next/font/google";
+import { AnimatePresence } from "framer-motion";
+import PageTransition from "./components/PageTransition";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -31,7 +35,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${khula.variable}`}>
-        {children}
+        <AnimatePresence mode="wait">
+          <PageTransition>
+            {children}
+          </PageTransition>
+        </AnimatePresence>
       </body>
     </html>
   );

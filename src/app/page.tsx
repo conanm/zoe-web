@@ -3,29 +3,16 @@
 import styles from "./page.module.css";
 import { motion } from 'framer-motion';
 
-// Main app colors
-export const MainColors = {
-  purple: '#BD50BD',
-  yellow: '#FBC120',
-  red: '#F16A67',
-};
-
-export const Gradients = {
-  purple: {
-    start: '#D15DD2',
-    end: '#A43FA5',
-  },
-  yellow: {
-    start: '#F1C343',
-    end: '#FEBB00',
-  },
-  red: {
-    start: '#F77F7C',
-    end: '#F16A67',
-  },
-} as const;
-
 export default function Home() {
+  const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    // Wait for the exit animation to complete
+    setTimeout(() => {
+      window.location.href = href;
+    }, 300);
+  };
+
   return (
     <div className={styles.main} style={{ 
         display: 'flex',
@@ -135,10 +122,10 @@ export default function Home() {
         >
           <a
             href="/privacy"
+            onClick={handleNavigation}
             style={{
               textDecoration: 'none',
-              color: 'inherit',
-              ':hover': { textDecoration: 'underline' }
+              color: 'inherit'
             }}
           >
             Privacy Policy
@@ -146,10 +133,10 @@ export default function Home() {
           <span>•</span>
           <a
             href="/faq"
+            onClick={handleNavigation}
             style={{
               textDecoration: 'none',
-              color: 'inherit',
-              ':hover': { textDecoration: 'underline' }
+              color: 'inherit'
             }}
           >
             FAQ
