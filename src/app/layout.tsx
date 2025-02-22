@@ -1,8 +1,8 @@
 "use client";
 
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import { Geist, Geist_Mono, Khula } from "next/font/google";
-import { AnimatePresence } from "framer-motion";
+// import { AnimatePresence } from "framer-motion";
 import PageTransition from "./components/PageTransition";
 import "./globals.css";
 

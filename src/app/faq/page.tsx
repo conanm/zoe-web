@@ -1,5 +1,7 @@
 "use client";
 
+import Link from 'next/link';
+
 export default function FAQ() {
   const handleBack = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -17,7 +19,7 @@ export default function FAQ() {
         color: '#FFF',
         fontFamily: 'var(--font-khula)',
       }}>
-        <a
+        <Link
           href="/"
           onClick={handleBack}
           style={{
@@ -30,7 +32,7 @@ export default function FAQ() {
           }}
         >
           ← Back
-        </a>
+        </Link>
         <h1 style={{ 
           fontSize: '48px', 
           marginBottom: '40px',
