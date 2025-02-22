@@ -1,4 +1,13 @@
+"use client";
+
 export default function PrivacyPolicy() {
+  const handleBack = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 400); // Matches exit animation duration
+  };
+
   return (
     <div className="page">
       <div style={{
