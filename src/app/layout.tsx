@@ -5,6 +5,7 @@ import { Geist, Geist_Mono, Khula } from "next/font/google";
 // import { AnimatePresence } from "framer-motion";
 import PageTransition from "./components/PageTransition";
 import "./globals.css";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,11 +36,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${khula.variable}`}>
-        
-          <PageTransition>
-            {children}
-          </PageTransition>
-        
+        <GoogleAnalytics trackPageViews />
+        <PageTransition>
+          {children}
+        </PageTransition>
+
       </body>
     </html>
   );
